@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hub de Links</title>
+  <style>
+    :root {
+      --bg1: #020617;
+      --bg2: #0b1220;
+      --neon: #22c55e;
+      --blue: #38bdf8;
+      --purple: #a78bfa;
+      --card: rgba(2, 6, 23, .75);
+      --border: #1f2933;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, Arial, sans-serif;
+      color: #e5e7eb;
+      background:
+        radial-gradient(1000px 400px at 10% -10%, #0ea5e933, transparent 60%),
+        radial-gradient(800px 300px at 110% 10%, #22c55e33, transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wrap::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: 20px;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px #0b1220, 0 0 30px #22c55e22;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: 1.6rem;
+      letter-spacing: .3px;
+      margin: 0 0 6px;
+    }
+
+    .subtitle {
+      opacity: .9;
+      font-size: .95rem;
+    }
+
+    .chips {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 10px 0 18px;
+    }
+
+    .chip {
+      font-size: .75rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #020617aa;
+      box-shadow: 0 0 12px #000 inset;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      text-decoration: none;
+      color: #020617;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: transform .08s ease, box-shadow .08s ease, filter .08s ease;
+      box-shadow: 0 8px 20px #22c55e33, inset 0 0 0 1px #00000022;
+    }
+
+    .btn.secondary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      box-shadow: 0 8px 20px #38bdf833, inset 0 0 0 1px #00000022;
+    }
+
+    .btn.purple {
+      background: linear-gradient(135deg, #a78bfa, #7c3aed);
+      box-shadow: 0 8px 20px #a78bfa33, inset 0 0 0 1px #00000022;
+    }
+
+    .btn.dark {
+      background: linear-gradient(135deg, #94a3b8, #64748b);
+      box-shadow: 0 8px 20px #94a3b833, inset 0 0 0 1px #00000022;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .right {
+      opacity: .8;
+      font-size: .9rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 14px;
+      font-size: .8rem;
+      opacity: .7;
+    }
+
+    /* Efeito de grade “tech” no fundo do card */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(#0b122055 1px, transparent 1px),
+        linear-gradient(90deg, #0b122055 1px, transparent 1px);
+      background-size: 22px 22px;
+      mask-image: radial-gradient(70% 60% at 50% 30%, #000 40%, transparent 70%);
+      pointer-events: none;
+      opacity: .35;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="grid"></div>
+
+    <header>
+      <h1 class="title">🎧SORRIZO.ZK💻</h1>
+      <p class="subtitle">Links rápidos para projetos, contato e som</p>
+
+      <div class="chips">
+        <span class="chip">#backend</span>
+        <span class="chip">#python</span>
+        <span class="chip">#saxofonista</span>
+        <span class="chip">#produtividade</span>
+      </div>
+    </header>
+
+    <section class="links">
+      <a class="btn" href="https://w.app/5wxaz8" target="_blank">
+        📱 WhatsApp <span class="right">contato</span>
+      </a>
+
+      <a class="btn secondary" href="https://www.linkedin.com/in/pedrolucasdossantos23/" target="_blank">
+        🧠 LinkedIn <span class="right">perfil</span>
+      </a>
+
+      <a class="btn purple" href="file:///C:/Users/Pichau/Desktop/projetos.html" target="_blank">
+        📃 Projetos <span class="right">programação</span>
+      </a>
+
+      <a class="btn dark" href="https://open.spotify.com/user/cnxs6a8oyxmpd8hcckewrzoxy?si=Su7dYnUOQMumaNdBgdwshg" target="_blank">
+        🎧 Spotify <span class="right">playlists</span>
+      </a>
+
+      <!-- adiciona mais se quiser -->
+      <!--
+      <a class="btn" href="https://seu-site.com" target="_blank">
+        🚀 Seu link <span class="right">novo</span>
+      </a>
+      -->
+    </section>
+
+    <footer>Feito com código e café ☕</footer>
+  </main>
+</body>
+</html>
